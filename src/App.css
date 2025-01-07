@@ -1,0 +1,392 @@
+@font-face {
+  font-family: 'iawriter-mono';
+  src: url('./fonts/ia-writer-mono-latin-400-normal.woff2') format('woff2'),
+       url('./fonts/ia-writer-mono-latin-400-normal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body, html, .App {
+  font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+body, html, .App {
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  font-weight: 900;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bullet-school a {
+  color: #5f4848;
+}
+
+.bullet-school a:hover {
+  color: #cba543;
+}
+
+.bullet-sticker a {
+  color: #5f4848;
+}
+
+.bullet-sticker a:hover {
+  color: #8aa9b0;
+}
+
+.link-persona {
+  color: #5f4848;
+}
+.link-persona:hover {
+  color: #7379fe;
+}
+
+.link-cookin {
+  color: #5f4848;
+}
+.link-cookin:hover {
+  color: #aa1f62;
+}
+
+.link-genesys {
+  color: #5f4848;
+}
+.link-genesys:hover {
+  color: rgb(222, 134, 28)
+}
+
+
+.layout {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+.page {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #5f4848; 
+  background-color: #ffffff;
+}
+
+/* Home page styles */
+.home header {
+  position: relative;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.home .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.home .container {
+  display: flex;
+  max-width: 800px;
+  background-color: #f0e7e7;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+.home .photo {
+  width: 350px;
+  border-radius: 10px 0 0 10px;
+  height: 350px;
+  margin-right: 40px;
+}
+
+.photo {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin-right: 40px;
+}
+
+.home ul {
+  list-style-type: none;
+  padding: 50px 0; /* Add padding to top and bottom */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px; /* Increase height to accommodate padding */
+}
+
+.home li {
+  margin: 0;
+}
+
+/* Experiences page styles */
+.experiences {
+  background-color: #f0e7e7;
+}
+
+.experience-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.experience-panel {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 15%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exp-description { 
+  font-size: 14px;
+}
+
+.exp-image {
+  /* width: 100%; */
+  height: 80px; 
+  /* object-fit: fill; */
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.exp-role {
+  color: #ca9f9f;
+}
+
+
+.carat {
+  position: relative;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 24px;
+  animation: bounce 2s infinite;
+}
+
+/* Projects page styles */
+.projects {
+  background-color: #f0f0f0;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.project-panel {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 20%;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.proj-title-link {
+  text-decoration: underline;
+  color: #5f4848;
+}
+
+.proj-title-link:hover {
+  text-decoration: underline;
+  color: #a87e7e;
+}
+
+.project-langs {
+  color: #a87e7e; 
+}
+
+.project-image {
+  /* width: 100%; */
+  height: 200px; 
+  /* object-fit: fill; */
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hobbies page styles */
+.hobbies {
+  background-color: #f0e7e7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobbies-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hobbies-panel {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 20%;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-image {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.hobby-link {
+  color: #5f4848;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.hobby-link:hover {
+  color: #a87e7e;
+}
+
+
+/* Contact page styles */
+.contact header {
+  font-size: 18px;
+ font-weight: 900; 
+}
+
+.gif-me {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin-top: 50px;
+}
+
+.contact .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px; 
+  margin-left: 100px;
+  margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+  padding: 0.5rem 1rem;
+  background-color: #ca9f9f;
+  font-weight: 900;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.contact-form button:hover {
+  background-color: #956565;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.socials a {
+  color: #ca9f9f;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #956565;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .project-panel {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-panel {
+    width: 80%;
+  }
+}
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
